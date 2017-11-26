@@ -450,7 +450,7 @@ public class NoobNester extends PollingScript<ClientContext> implements PaintLis
             public void repaint (Graphics graphics){
                 long Milliseconds = this.getTotalRuntime();
                 long Seconds = (Milliseconds / 1000) % 60;
-                long Minutes = (Milliseconds / 1000 * 60) % 60;
+                long Minutes = (Milliseconds / (1000 * 60)) % 60;
                 long Hours = (Milliseconds / (1000 * 60 * 60)) % 24;
                 int profit = (nestsOpened*nestPrice)+(LantadymeGained*LantadymePrice)+
                         (DwarfWeedPrice*DwarfWeedGained)+(CadantinePrice*CadantineGained)+(RanarrPrice*RanarrGained)+
